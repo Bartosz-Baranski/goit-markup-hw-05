@@ -644,13 +644,3 @@ ul {
   font-weight: 700;
   color: var(--logo-footer);
 }
-/* .link-after::after,
-.link-after::after,
-.link-after::after {
-  content: "";
-  width: 53px;
-  height: 4px;
-  background-color: #2196f3;
-  border-radius: 2px;
-  display: block;
-} */
