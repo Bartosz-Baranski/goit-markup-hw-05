@@ -21,6 +21,8 @@
   --shadow-teamat: rgba(0, 0, 0, 0.25);
   --shadow-modal-second: rgba(0, 0, 0, 0.14);
   --shadow-modal-third: rgba(0, 0, 0, 0.2);
+  --box-description-bgc: rgba(47, 48, 58, 0.8);
+  --box-hidden-portfolio: rgba(33, 150, 243, 0.902);
 }
 
 body {
@@ -45,6 +47,7 @@ body {
 .active-blue:hover,
 .active-blue:active {
   color: var(--link-focus);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link {
   font-size: 14px;
@@ -60,6 +63,7 @@ body {
   color: var(--logo-footer);
   background-color: var(--link-focus);
   border: var(--link-focus);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .buttons {
   font-family: var(--main-font);
@@ -409,11 +413,13 @@ ul {
 .contact:hover > svg,
 .contact:focus > svg {
   fill: var(--link-focus);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-header:hover,
 .icon-header:focus,
 .icon-header:active {
   fill: var(--link-focus);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mooto-section {
   background-image: linear-gradient(
@@ -455,11 +461,13 @@ ul {
 .media-teamat:focus > svg {
   fill: var(--logo-footer);
   background-color: var(--link-focus);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .media-teamat:hover,
 .media-teamat:focus,
 .media-teamat:active {
   background-color: var(--link-focus);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* .icon-teamat:hover,
 .icon-teamat:focus,
@@ -482,11 +490,13 @@ ul {
 .box-icon-foot:focus > svg {
   fill: var(--logo-footer);
   background-color: var(--link-focus);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box-icon-foot:hover,
 .box-icon-foot:active,
 .box-icon-foot:focus {
   background-color: var(--link-focus);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-media-footer {
   fill: var(--logo-footer);
@@ -523,26 +533,25 @@ ul {
 .icon-client:focus > svg {
   fill: var(--link-focus);
   border-color: var(--link-focus);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-client:hover,
 .icon-client:focus,
 .icon-client:active {
   border-color: var(--link-focus);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-logo {
   fill: var(--icon-client);
 }
-/* .icon-logo:hover,
-.icon-logo:focus,
-.icon-logo:active {
-  fill: var(--link-focus);
-} */
+
 .selection-buttons:hover,
 .selection-buttons:focus,
 .selection-buttons:active {
   cursor: pointer;
   box-shadow: 0px 2px 2px var(--shadow-first-btn-selection),
     0 1px 2px var(--shadow-second-btn-selection);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .our-product:focus,
 .our-product:hover,
@@ -550,6 +559,7 @@ ul {
   cursor: pointer;
   box-shadow: 1px 4px 6px var(--shadow-first-our-product),
     0 4px 4px var(--shadow-second-our-roduct);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .teamat {
   box-shadow: 0 4px 4px var(--shadow-teamat);
@@ -598,7 +608,7 @@ ul {
   left: 0;
   width: 370px;
   height: 294px;
-  background-color: rgba(33, 150, 243, 0.9);
+  background-color: var(--box-hidden-portfolio);
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   visibility: hidden;
@@ -615,8 +625,24 @@ ul {
 .our-product:hover .box-hidden,
 .our-product:focus .box-hidden {
   transform: translateY(0);
-
   visibility: visible;
+}
+.box-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 70px;
+  background-color: var(--box-description-bgc);
+  position: relative;
+  top: -74px;
+  z-index: 1;
+}
+.description {
+  font-size: 14px;
+  line-height: 1.172;
+  font-weight: 700;
+  color: var(--logo-footer);
 }
 /* .link-after::after,
 .link-after::after,
