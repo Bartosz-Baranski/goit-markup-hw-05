@@ -243,7 +243,6 @@ ul {
 .rules-list {
   display: flex;
   justify-content: space-between;
-  height: 101px;
   padding-left: 0px;
   margin: 0px;
   gap: 30px;
