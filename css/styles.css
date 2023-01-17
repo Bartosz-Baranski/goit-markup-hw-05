@@ -644,3 +644,15 @@ ul {
   font-weight: 700;
   color: var(--logo-footer);
 }
+.link-nav {
+  position: relative;
+}
+.link-nav::after {
+  content: "";
+  background-color: var(--link-focus);
+  width: 53px;
+  height: 4px;
+  position: absolute;
+  top: 45px;
+  left: 0;
+}
