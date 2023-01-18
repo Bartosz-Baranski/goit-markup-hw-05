@@ -26,16 +26,10 @@
               >
             </li>
             <li class="navigation-link">
-              <a class="link active-blue " href="./portfolio.html"
-                >Portfolio</a
-              >
-              <div class="underline"></div>
+              <a class="link active-blue" href="./portfolio.html">Portfolio</a>
             </li>
             <li class="navigation-link">
-              <a class="link active-blue " href="./kontakt.html"
-                >Kontakty</a
-              >
-              <div class="underline"></div>
+              <a class="link active-blue" href="./kontakt.html">Kontakty</a>
             </li>
           </ul>
         </nav>
@@ -68,13 +62,6 @@
           <button data-modal-open class="buttons order" type="button">
             Zamów usługe
           </button>
-          <div class="modal is-hidden" data-modal>
-            <button data-modal-close class="close-icon">
-              <svg class="close" width="30" height="30">
-                <use href="./images/icons.svg#icon-cross"></use>
-              </svg>
-            </button>
-          </div>
         </div>
       </section>
       <section class="container section">
@@ -197,7 +184,10 @@
               </ul>
               <ul>
                 <li class="icon-maedia">
-                  <a class="active-blue" href="https://www.instagram.com/">
+                  <a
+                    class="active-blue media"
+                    href="https://www.instagram.com/"
+                  >
                     <div class="media-teamat">
                       <svg class="icon-teamat" width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram"></use>
@@ -344,12 +334,12 @@
         <h3 class="title tiitle-client">Nasi klienci</h3>
         <ul class="our-clients">
           <li class="list-icons-clients">
-            <a class="active-blue" href="">
+            <a class="active-blue link-client" href="">
               <div class="icon-client">
                 <svg class="icon-logo" width="106" height="60">
                   <use href="./images/icons.svg#icon-Logo"></use>
                 </svg></div></a
-            ><a class="active-blue" href="">
+            ><a class="active-blue link-client" href="">
               <div class="icon-client">
                 <svg class="icon-logo" width="106" height="60">
                   <use href="./images/icons.svg#icon-Logotwo"></use>
@@ -437,7 +427,15 @@
     </footer>
     <body>
       <!-- Wszystkie Twoje znaczniki HTML, w tym znaczniki okna modalnego  -->
-
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button data-modal-close class="close-icon">
+            <svg class="close" width="30" height="30">
+              <use href="./images/icons.svg#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
       <!-- Umieść przed zamykającym tagiem body -->
       <script src="./js/modal.js"></script>
     </body>

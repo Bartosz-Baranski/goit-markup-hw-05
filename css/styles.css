@@ -23,6 +23,7 @@
   --shadow-modal-third: rgba(0, 0, 0, 0.2);
   --box-description-bgc: rgba(47, 48, 58, 0.8);
   --box-hidden-portfolio: rgba(33, 150, 243, 0.902);
+  --transition-active: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -47,7 +48,7 @@ body {
 .active-blue:hover,
 .active-blue:active {
   color: var(--link-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-active);
 }
 .link {
   font-size: 14px;
@@ -63,7 +64,7 @@ body {
   color: var(--logo-footer);
   background-color: var(--link-focus);
   border: var(--link-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-active);
 }
 .buttons {
   font-family: var(--main-font);
@@ -412,13 +413,13 @@ ul {
 .contact:hover > svg,
 .contact:focus > svg {
   fill: var(--link-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-active);
 }
 .icon-header:hover,
 .icon-header:focus,
 .icon-header:active {
   fill: var(--link-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-active);
 }
 .mooto-section {
   background-image: linear-gradient(
@@ -456,22 +457,36 @@ ul {
   border-radius: 50px;
   background-color: var(--logo-footer);
 }
-.media-teamat:hover > svg,
-.media-teamat:focus > svg {
-  fill: var(--logo-footer);
+
+.active-blue:focus > .media-teamat,
+.ative-blue:focus > .box-icon-foot {
   background-color: var(--link-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-active);
 }
+
 .media-teamat:hover,
 .media-teamat:focus,
 .media-teamat:active {
   background-color: var(--link-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-active);
+}
+.media-teamat:hover > svg,
+.media-teamat:focus > svg,
+.media-teamat:active > svg {
+  fill: var(--logo-footer);
+  background-color: var(--link-focus);
+  transition: var(--transition-active);
 }
 
 .icon-teamat {
   fill: var(--icon-client);
 }
+.icon-teamat:hover,
+.icon-teamat:focus,
+.icon-teamat:active {
+  fill: var(--logo-foter);
+}
+
 .box-icon-foot {
   display: flex;
   justify-content: center;
@@ -485,13 +500,13 @@ ul {
 .box-icon-foot:focus > svg {
   fill: var(--logo-footer);
   background-color: var(--link-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-active);
 }
 .box-icon-foot:hover,
 .box-icon-foot:active,
 .box-icon-foot:focus {
   background-color: var(--link-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-active);
 }
 .icon-media-footer {
   fill: var(--logo-footer);
@@ -524,13 +539,13 @@ ul {
 .icon-client:focus > svg {
   fill: var(--link-focus);
   border-color: var(--link-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-active);
 }
 .icon-client:hover,
 .icon-client:focus,
 .icon-client:active {
   border-color: var(--link-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-active);
 }
 .icon-logo {
   fill: var(--icon-client);
@@ -542,7 +557,7 @@ ul {
   cursor: pointer;
   box-shadow: 0px 2px 2px var(--shadow-first-btn-selection),
     0 1px 2px var(--shadow-second-btn-selection);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-active);
 }
 .our-product:focus,
 .our-product:hover,
@@ -550,22 +565,12 @@ ul {
   cursor: pointer;
   box-shadow: 1px 4px 6px var(--shadow-first-our-product),
     0 4px 4px var(--shadow-second-our-roduct);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-active);
 }
 .teamat {
   box-shadow: 0 4px 4px var(--shadow-teamat);
 }
-.backdrop {
-  width: 100%;
-  height: 100%;
-  background: #00000033;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-}
+
 .modal {
   display: flex;
   justify-content: flex-end;
@@ -576,7 +581,7 @@ ul {
   position: fixed;
   z-index: 1;
   transition-property: visibility, opacity, transform;
-  transition-duration: 2s;
+  transition-duration: 1s;
   transform: translateX(-50%) translateY(-50%) scale(1) rotate(360deg);
   background-color: var(--logo-footer);
   border-radius: 4px;
@@ -603,6 +608,17 @@ ul {
   cursor: pointer;
   background-color: red;
 }
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background: #00000033;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+}
 .box-overlay {
   position: relative;
   overflow: hidden;
@@ -617,7 +633,7 @@ ul {
   height: 294px;
   background-color: var(--box-hidden-portfolio);
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-active);
   visibility: hidden;
 }
 .text-portfolio {
