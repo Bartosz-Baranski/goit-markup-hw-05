@@ -660,7 +660,7 @@ ul {
   height: 70px;
   background-color: var(--box-description-bgc);
   position: absolute;
-  top: 224px;
+  bottom: 4px;
 }
 .description {
   font-size: 14px;
