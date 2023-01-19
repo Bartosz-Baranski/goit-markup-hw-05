@@ -462,16 +462,16 @@ ul {
   background-color: var(--link-focus);
   transition: var(--transition-active);
 }
-
+/* .media-teamat:focus > .icon-maedia {
+  fill: var(--logo-footer);
+  transition: var(--transition-active);
+} */
 .media-teamat:hover,
-.media-teamat:focus,
 .media-teamat:active {
   background-color: var(--link-focus);
   transition: var(--transition-active);
 }
-.media-teamat:hover > svg,
-.media-teamat:focus > svg,
-.media-teamat:active > svg {
+.media-teamat:hover > svg {
   fill: var(--logo-footer);
   background-color: var(--link-focus);
   transition: var(--transition-active);
@@ -490,19 +490,18 @@ ul {
   border-radius: 50px;
   background-color: var(--signatures);
 }
-.ative-blue:focus > .box-icon-foot {
+.active-blue:focus > .box-icon-foot {
   background-color: var(--link-focus);
+  fill: var(--logo-footer);
   transition: var(--transition-active);
 }
-.box-icon-foot:hover > svg,
-.box-icon-foot:focus > svg {
+.box-icon-foot:hover > svg {
   fill: var(--logo-footer);
   background-color: var(--link-focus);
   transition: var(--transition-active);
 }
 .box-icon-foot:hover,
-.box-icon-foot:active,
-.box-icon-foot:focus {
+.box-icon-foot:active {
   background-color: var(--link-focus);
   transition: var(--transition-active);
 }
@@ -540,13 +539,16 @@ ul {
   transition: var(--transition-active);
 }
 .icon-client:hover,
-.icon-client:focus,
 .icon-client:active {
   border-color: var(--link-focus);
   transition: var(--transition-active);
 }
 .icon-logo {
   fill: var(--icon-client);
+}
+.active-blue:focus > .icon-client {
+  border-color: var(--link-focus);
+  fill: var(--link-focus);
 }
 
 .selection-buttons:hover,
