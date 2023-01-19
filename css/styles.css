@@ -264,6 +264,7 @@ ul {
 .our-work-img {
   display: flex;
   justify-content: space-between;
+  position: relative;
   padding-left: 0px;
   margin: 0px;
   gap: 30px;
@@ -658,8 +659,8 @@ ul {
   width: 370px;
   height: 70px;
   background-color: var(--box-description-bgc);
-  position: relative;
-  top: -74px;
+  position: absolute;
+  top: 224px;
 }
 .description {
   font-size: 14px;
