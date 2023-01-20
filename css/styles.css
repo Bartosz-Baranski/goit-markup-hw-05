@@ -594,7 +594,6 @@ ul {
 }
 .modal {
   display: flex;
-  justify-content: flex-end;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -621,7 +620,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
   top: 17px;
   right: 17px;
   width: 30px;
