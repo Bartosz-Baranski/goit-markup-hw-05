@@ -621,14 +621,21 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 17px;
+  right: 17px;
   width: 30px;
   height: 30px;
   border-radius: 50px;
+  background-color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  margin: 0px;
 }
+
 .close-icon:hover,
 .close-icon:focus {
   cursor: pointer;
-  background-color: red;
 }
 
 .box-overlay {
