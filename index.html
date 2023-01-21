@@ -62,6 +62,15 @@
           <button data-modal-open class="buttons order" type="button">
             Zamów usługe
           </button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button data-modal-close class="close-icon">
+                <svg class="close" width="11" height="11">
+                  <use href="./images/icons.svg#icon-cross"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       <section class="container section">
@@ -434,19 +443,10 @@
         </section>
       </section>
     </footer>
-    <body>
-      <!-- Wszystkie Twoje znaczniki HTML, w tym znaczniki okna modalnego  -->
-      <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <button data-modal-close class="close-icon">
-            <svg class="close" width="11" height="11">
-              <use href="./images/icons.svg#icon-cross"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <!-- Umieść przed zamykającym tagiem body -->
-      <script src="./js/modal.js"></script>
-    </body>
+
+    <!-- Wszystkie Twoje znaczniki HTML, w tym znaczniki okna modalnego  -->
+
+    <!-- Umieść przed zamykającym tagiem body -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>
